@@ -10,9 +10,9 @@ A guessing game influnced by Wordle!
 ## Wire Frames
 
 **Initial Landing View**
+![GTW start screen](https://github.com/nebstech/Guess-That-Word/assets/156877357/3d1460df-0b3f-4f5a-95d6-d5d478ca79f1)
 
-![yAr-OlU8S6it2YoTZa-CIg](https://github.com/nebstech/Guess-That-Word/assets/156877357/a94f4dc0-7d07-4b53-b70f-660a14a5c5b5)
-![thumbnail_IMG_4387](https://github.com/nebstech/Guess-That-Word/assets/156877357/8d93531b-d774-406e-bfb9-8d178a9a58a3)
+
 
 
 **Results View**
