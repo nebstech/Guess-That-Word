@@ -45,13 +45,11 @@ Achievements and Rewards: Include unlockable achievements and rewards for comple
 
 | Day        |   | Task                               |
 |------------|---|------------------------------------|
-| Thursday   |   | Create and present proposal        |          
-| Friday     |   | Create html, js, css files         |          
-| Saturday   |   | Create basic scaffolding           |          
-| Sunday     |   | Add functionality                  |          
-| Monday     |   | Add styling                        |          
-| Tuesday    |   | Finaliza MVP                       |          
-| Wedenesday |   | Work on stretch goals              |          
-| Thursday   |   | Work on icebox items if applicable |          
-| Friday     |   | Presentation Day!                  |          
-|            |   |                                    |          
+| Monday     |   | Create and present proposal        |          
+| Tuesday    |   | Create html, js, css files         |          
+| Wedenesday |   | Create basic scaffolding           |          
+| Thursday   |   | Add functionality                  |          
+| Friday     |   | Finish up MVP                      |                 
+| Saturday   |   | Work on Stretch Goals              |          
+| Sunday     |   | Revise/cut out stretch not complete| 
+| Monday     |   | Presentation Day                   | 
