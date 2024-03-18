@@ -27,4 +27,4 @@ After either winning or losing, the game displays the correct word to the player
 The player can then choose to play again or exit the game.
 
 
-![thumbnail_IMG_4387](https://github.com/nebstech/Guess-That-Word/assets/156877357/8d93531b-d774-406e-bfb9-8d178a9a58a3)
+![yAr-OlU8S6it2YoTZa-CIg](https://github.com/nebstech/Guess-That-Word/assets/156877357/a94f4dc0-7d07-4b53-b70f-660a14a5c5b5)
