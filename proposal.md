@@ -55,13 +55,3 @@ As a player, I want to unlock achievements and receive rewards for completing ch
 | Saturday   |   | Optimize Game                      |          
 | Sunday     |   | Finalize tasks & review            |          
 
-=======
-| Monday     |   | Create and present proposal        |          
-| Tuesday    |   | Create html, js, css files         |          
-| Wedenesday |   | Create basic scaffolding           |          
-| Thursday   |   | Add functionality                  |          
-| Friday     |   | Finish up MVP                      |                 
-| Saturday   |   | Work on Stretch Goals              |          
-| Sunday     |   | Revise/cut out stretch not complete| 
-| Monday     |   | Presentation Day                   | 
->>>>>>> 5e04752d00a4b12f2b3bc6ce18039d75dc09ad07
