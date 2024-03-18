@@ -12,6 +12,7 @@ A guessing game influnced by Wordle!
 **Initial Landing View**
 
 ![yAr-OlU8S6it2YoTZa-CIg](https://github.com/nebstech/Guess-That-Word/assets/156877357/a94f4dc0-7d07-4b53-b70f-660a14a5c5b5)
+![thumbnail_IMG_4387](https://github.com/nebstech/Guess-That-Word/assets/156877357/8d93531b-d774-406e-bfb9-8d178a9a58a3)
 
 
 **Results View**
@@ -26,32 +27,30 @@ A guessing game influnced by Wordle!
 
 #### MVP Goals
 
-Word Guessing Logic: Develop a mechanism to detect when a player correctly guesses the word within the time limit.
-Lose Notification: Inform players when the game end, indicating that the word was not guessed within the time limit.
-Guess Confirmation: Provide feedback when a player guesses the correct word, confirming that their selection is valid.
-Restart Functionality: Allow players to restart the game after a successful guess or a failed attempt to encourage replayability.
-Engaging UI: Design an immersive and visually appealing user interface that enhances the gameplay experience and keeps players engaged throughout.\*\*
+As a player, I want the game to detect when I correctly guess the word within the time limit to ensure a challenging and time-bound experience.
+As a player, I want to be notified when the game ends because I couldn't guess the word within the time limit, providing closure to the game session.
+As a player, I want feedback confirming that my word guess is correct, validating my choice and progress in the game.
+As a player, I want the option to restart the game after either successfully guessing the word or failing to do so, promoting replayability and improvement.
+As a player, I want an engaging user interface that immerses me in the gameplay experience, making the game visually appealing and keeping me engaged throughout. 
 
 #### Stretch Goals
 
-Accessibility Features: Implement accessibility options for players using assistive technologies to ensure inclusivity and enjoyment of the game.
-Leaderboards: Create leaderboards to track and display high scores achieved by players, adding a competitive element to the game.
-Word Categories: Expand the word list to include different categories (e.g., animals, food, movies) and allow players to choose their preferred category.
-Hint System: Introduce a hint system that provides clues or reveals letters in the word to assist players who are struggling to guess the word.
-Achievements and Rewards: Include unlockable achievements and rewards for completing challenges, guessing difficult words, or achieving high scores.
+As a player, I want the game to have accessibility options so that I can enjoy playing using assistive technologies, ensuring inclusivity and accessibility for all players.
+As a player, I want to see leaderboards displaying high scores achieved by other players, adding a competitive aspect to the game and motivating me to improve my score.
+As a player, I want the game to include word categories so that I can choose my preferred category (e.g., animals, food, movies), adding variety and personalization to the gameplay experience.
+As a player, I want a hint system in the game that provides clues or reveals letters in the word to help me when I'm struggling to guess the word, enhancing the game's accessibility and reducing frustration.
+As a player, I want to unlock achievements and receive rewards for completing challenges, guessing difficult words, or achieving high scores, adding depth and motivation to continue playing and exploring different aspects of the game.
 
 
 #### Timeline - Daily Accountability
 
 | Day        |   | Task                               |
 |------------|---|------------------------------------|
-| Thursday   |   | Create and present proposal        |          
-| Friday     |   | Create html, js, css files         |          
-| Saturday   |   | Create basic scaffolding           |          
-| Sunday     |   | Add functionality                  |          
-| Monday     |   | Add styling                        |          
-| Tuesday    |   | Finaliza MVP                       |          
-| Wedenesday |   | Work on stretch goals              |          
-| Thursday   |   | Work on icebox items if applicable |          
-| Friday     |   | Presentation Day!                  |          
-|            |   |                                    |          
+| Monday     |   | Work on HTML and presentation      |          
+| Tuesday    |   | Work on CSS and JavaScript to style|          
+| Wednesday  |   | Implement basic interactivity      |          
+| Thursday   |   | additional features                |          
+| Friday     |   | Animations & debug                 |          
+| Saturday   |   | Optimize Game                      |          
+| Sunday     |   | Finalize tasks & review            |          
+
