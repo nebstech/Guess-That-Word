@@ -16,6 +16,7 @@ A guessing game influnced by Wordle!
 
 
 **Results View**
+![thumbnail_IMG_4387](https://github.com/nebstech/Guess-That-Word/assets/156877357/8d93531b-d774-406e-bfb9-8d178a9a58a3)
 
 ![kGSYAkaSRd2u7HQMqXASvg](https://github.com/nebstech/Guess-That-Word/assets/156877357/7f0253a5-7d93-41ec-b42e-4b6cdf51c4a6
 
