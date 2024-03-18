@@ -1,5 +1,6 @@
 // 1. Define the required variables to track state of game.
      // define initGame();
+     // render function to render game over when next word is clicked
 
 
    // create JS that holds an array of all words
@@ -37,3 +38,10 @@
 // add alert that lets user know if the input was incorrect 
     // if users input is correct, spit out another word
     // return an alert to prompt user for input if nothing was typed
+
+// set max input value to word length
+
+// add timer 
+  // call timer with init function
+  // time decreases by 1
+  // if correct reset timer // restart game

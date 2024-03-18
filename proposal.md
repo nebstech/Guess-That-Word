@@ -8,10 +8,12 @@ A guessing game influnced by Wordle!
 "Guess that Word" is a captivating game app that challenges players' vocabulary and quick thinking skills. In this app, players have to guess a word within a limited time frame to win.  
 
 ## Wire Frames
-
+https://www.figma.com/file/dTYlN8Wy4X9nXwmAkIT46z/Untitled?type=whiteboard&node-id=0-1&t=SvWKDpsCDksfSzmy-0
 **Initial Landing View**
 
+**
 ![yAr-OlU8S6it2YoTZa-CIg](https://github.com/nebstech/Guess-That-Word/assets/156877357/a94f4dc0-7d07-4b53-b70f-660a14a5c5b5)
+**
 ![thumbnail_IMG_4387](https://github.com/nebstech/Guess-That-Word/assets/156877357/8d93531b-d774-406e-bfb9-8d178a9a58a3)
 
 
