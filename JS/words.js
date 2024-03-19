@@ -47,5 +47,15 @@ const words = [
   { word: "soccer", hint: "A team sport played with a spherical ball between two teams of eleven players." },
   { word: "dragon", hint: "A mythical creature resembling a giant reptile, often depicted with wings and breathing fire." },
   { word: "volcano", hint: "A mountain or hill with a crater or vent through which lava, rock fragments, ash, and gases erupt." },
-  { word: "garden", hint: "An area of land used for growing flowers, fruits, vegetables, or herbs." }
+  { word: "garden", hint: "An area of land used for growing flowers, fruits, vegetables, or herbs." },
+  { word: "coffee", hint: "A popular beverage made from roasted coffee beans" },
+  { word: "house", hint: "A building where people live, typically a single-family dwelling" },
+  { word: "car", hint: "A vehicle with four wheels that is used for transportation" },
+  { word: "book", hint: "A written or printed work consisting of pages bound together" },
+  { word: "dog", hint: "A domesticated carnivorous mammal often kept as a pet" },
+  { word: "cat", hint: "A small domesticated carnivorous mammal with soft fur" },
+  { word: "tree", hint: "A tall perennial woody plant with a single main stem" },
+  { word: "phone", hint: "A device used for telecommunications, typically with a touchscreen" },
+  { word: "friend", hint: "A person with whom one has a bond of mutual affection" },
+  { word: "music", hint: "Artistic expression through sound, often involving rhythm and melody" }
 ];

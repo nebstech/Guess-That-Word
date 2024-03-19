@@ -10,34 +10,41 @@
 <body>
   <main>
     <div class="container">
-      <h2>Guess That Word </h2>
+      <h2>Guess That Word</h2>
       <div class="content">
         <p class="word"></p>
         <div class="details">
-          <p class="hint"><b>Hint: </b><span></span></p>
+          <p class="hint"><b>Hint:</b> <span></span></p>
           <p class="time">Time Left: <span><b>25</b>s</span></p>
         </div>
-        <input type="text" placeholder="Debug Here: ">
+        <input type="text" placeholder="Debug Here:">
       </div>
       <div class="buttons-container">
         <button class="refresh-button">Refresh</button>
         <button class="check-button">Enter Word</button>
-      <div class="instructions">
-        <button class="instButton">Inst.</button>
       </div>
-      <div id="myModal" class="modal">
+      <span class="info-icon">Info Text</span>
+      <div class="modal" id="myModal">
         <div class="modal-content">
           <span class="close"></span>
           <p>Congratulations! You guessed the word correctly.</p>
-          </div>
-          <div id="newModal" class="nModal">
-            <div class="mod-content">
-              <span class="newclose"></span>
-              <p>Nope, more malware incoming.</p>
-              </div>
+        </div>
+      </div>
+      <div class="nModal" id="newModal">
+        <div class="mod-content">
+          <span class="newclose"></span>
+          <p>Nope, more malware incoming.</p>
+        </div>
+      </div>
+      <div id="gameOverModal" class="modal">
+        <div class="modContent">
+          <span class="twoClose">&times;</span>
+          <h2>Game Over</h2>
+          <p>Time's up! Do you want to play again?</p>
+          <button id="resetBtn">Play Again</button>
+        </div>
+      </div>
     </div>
-    
-    
   </main>
   <script src="js/words.js" defer></script>
   <script src="js/app.js" defer></script>
