@@ -1,16 +1,77 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'VT323', 'monospace';
+}
+
 body {
+  background-image: url('/images/cool-retro-term.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: #282828;
   min-height: 100vh;
   margin: 0;
 }
+
 .container {
   text-align: center;
+  width: 700px;
+  height: 400px;
+  border-radius: 7px;
+  background: #282828;
 }
 
-h2 {
-  font-size: 42px;
+.container h2 {
+  font-size: 60px;
+  color: #33ff00;
+  text-shadow: 0 0 10px #ffff;
+  animation: glowAnimation 1s ease-in-out infinite alternate;
+  padding: 20px 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+@keyframes glowAnimation {
+  from {
+    text-shadow: 0 0 10px #33ff00;
+  }
+  to {
+    text-shadow: 0 0 20px #ffff;
+  }
+}
+
+.container .content {
+  margin: 25px 20px 35px;
+}
+
+.content .word {
+  font-size: 50px;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  color: #33ff00;
+  display: inline-block;
+}
+
+.content .details {
+  margin: 25px 0 20px;
   color: #33ff00;
 }
 
+.details .time {
+  font-size: 33px;
+}
+
+.details p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
