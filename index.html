@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="images/pixel-art-old-computer-icon-for-8bit-game-on-white-background-vector.jpg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guess The Word !</title>
+  <title>GTW: Think Fast!</title>
 </head>
 <body>
   <main>
     <div class="container">
-      <h2>Guess That Word !</h2>
+      <h2>Guess That Word</h2>
       <div class="content">
         <p class="word">HGSYST</p>
         <div class="details">
           <p class="hint"><b>Hint:</b><span>Whatever that means</span></p>
           <p class="time">Time Left: <span><b>25</b>s</span></p>
         </div>
-        <input type="text" placeholder="Enter Word">
+        <input type="text" placeholder="Enter Guess">
       </div>
       <button class="refresh-button">Refresh</button>
       <button class="check-button">Enter Word</button>
+      <div class="instructions">
+        <button class="instButton">Inst.</button>
+      </div>
     </div>
     
+    
   </main>
-  
+  <script src="js/app.js" defer></script>
+  <script src="js/words.js" defer></script>
 </body>
 </html>

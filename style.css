@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #282828;
+  min-height: 100vh;
+  margin: 0;
+}
+.container {
+  text-align: center;
+}
+
+h2 {
+  font-size: 42px;
+  color: #33ff00;
+}
+

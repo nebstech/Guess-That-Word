@@ -1,3 +1,6 @@
+
+
+
 // 1. Define the required variables to track state of game.
      // define initGame();
      // render function to render game over when next word is clicked
