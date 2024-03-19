@@ -1,3 +1,52 @@
+const wordTxt = document.querySelector('.word');
+const hintTxt = document.querySelector('.hint span');
+const refreshBtn = document.querySelector('.refresh-button');
+const enterBtn = document.querySelector('.check-button');
+const userInput = document.querySelector('input[type="text"]');
+let correctWord = null;
+const modal = document.getElementById('myModal');
+const span = document.getElementsByClassName('close')[0];
+const secondModal = document.getElementById('newModal');
+const newClose = document.getElementsByClassName('newclose')[0];
+
+const initGame = () => {
+   let randomWord = words[Math.floor(Math.random() * words.length)]; // grab random word from array
+   let wordArr = randomWord.word.split(''); // split each letter of word
+   for (let i = wordArr.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1)); // random number
+      // shuffle and swap letters
+      [wordArr[i], wordArr[j]] = [wordArr[j], wordArr[i]]
+   }
+   correctWord = randomWord.word;
+   wordTxt.innerHTML = wordArr.join(''); // passing shuffled word to HTML
+   hintTxt.innerHTML = randomWord.hint; //pass hint
+   console.log(randomWord);
+ }
+ 
+ initGame();
+ 
+refreshBtn.addEventListener('click', initGame); // runs init function to refresh word
+enterBtn.addEventListener('click', function() {
+   const userInputValue = userInput.value.trim().toLowerCase(); // get user input
+   if (userInputValue === correctWord.toLowerCase()) {
+      modal.style.display = 'block';
+      setTimeout(function() {
+         modal.style.display = 'none';
+      }, 1000);
+      userInput.value = '';
+      initGame();
+   }else {
+      secondModal.style.display = 'block';
+      setTimeout(function() {
+         secondModal.style.display = 'none';
+      }, 1000);
+      
+      userInput.value = '';
+   }
+});
+   
+
+
 
 
 

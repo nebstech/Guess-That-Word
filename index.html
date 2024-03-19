@@ -10,25 +10,36 @@
 <body>
   <main>
     <div class="container">
-      <h2>Guess That Word</h2>
+      <h2>Guess That Word </h2>
       <div class="content">
-        <p class="word">cryptocurrency</p>
+        <p class="word"></p>
         <div class="details">
-          <p class="hint"><b>Hint: </b><span>Digital or virtual currencies that use cryptography for security.</span></p>
+          <p class="hint"><b>Hint: </b><span></span></p>
           <p class="time">Time Left: <span><b>25</b>s</span></p>
         </div>
         <input type="text" placeholder="Debug Here: ">
       </div>
-      <button class="refresh-button">Refresh</button>
-      <button class="check-button">Enter Word</button>
+      <div class="buttons-container">
+        <button class="refresh-button">Refresh</button>
+        <button class="check-button">Enter Word</button>
       <div class="instructions">
         <button class="instButton">Inst.</button>
       </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close"></span>
+          <p>Congratulations! You guessed the word correctly.</p>
+          </div>
+          <div id="newModal" class="nModal">
+            <div class="mod-content">
+              <span class="newclose"></span>
+              <p>Nope, more malware incoming.</p>
+              </div>
     </div>
     
     
   </main>
-  <script src="js/app.js" defer></script>
   <script src="js/words.js" defer></script>
+  <script src="js/app.js" defer></script>
 </body>
 </html>
