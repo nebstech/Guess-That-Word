@@ -1,18 +1,29 @@
-const wordTxt = document.querySelector('.word');
-const hintTxt = document.querySelector('.hint span');
-const timeText = document.querySelector('.time b')
-const refreshBtn = document.querySelector('.refresh-button');
-const enterBtn = document.querySelector('.check-button');
-const userInput = document.querySelector('input[type="text"]');
-let correctWord = null;
-const modal = document.getElementById('myModal');
-const span = document.getElementsByClassName('close')[0];
-const secondModal = document.getElementById('newModal');
-const newClose = document.getElementsByClassName('newclose')[0];
-const thirdModal = document.getElementById('gameOverModal');
-const resetBtn = document.getElementById('resetBtn');
-let timer = null; 
+const wordTxt = document.querySelector('.word'); // Selects the element to display the shuffled word
+const hintTxt = document.querySelector('.hint span'); // Selects the element to display the hint
+const timeText = document.querySelector('.time b'); // Selects the element to display the time
+const refreshBtn = document.querySelector('.refresh-button'); // Selects the refresh button
+const enterBtn = document.querySelector('.check-button'); // Selects the enter button
+const userInput = document.querySelector('input[type="text"]'); // Selects the user input field
+let correctWord = null; // Variable to store the correct word
+const modal = document.getElementById('myModal'); // Selects the modal for correct guesses
+const span = document.getElementsByClassName('close')[0]; // Selects the close button for the modal
+const secondModal = document.getElementById('newModal'); // Selects the modal for incorrect guesses
+const newClose = document.getElementsByClassName('newclose')[0]; // Selects the close button for the second modal
+const thirdModal = document.getElementById('gameOverModal'); // Selects the game over modal
+const resetBtn = document.getElementById('resetBtn'); // Selects the reset button
+let timer = null; // Variable to store the timer
 
+document.addEventListener('DOMContentLoaded', () => {
+   const startBtn = document.querySelector('.start');
+   const mainContent = document.querySelector('main');
+ 
+   startBtn.addEventListener('click', () => {
+     startBtn.style.display = 'none'; // Hide the start button
+     mainContent.style.display = 'block'; // Show the main content
+     initGame(); // Initialize the game
+   });
+ });
+ 
 const resetGame = () => {
    clearInterval(timer); // Clear any existing timer
    initGame(); // Start a new game
@@ -51,12 +62,18 @@ const initGame = () => {
    userInput.value = "";
    userInput.setAttribute('maxlength', correctWord.length); // max length input allowed
    console.log(randomWord);
+
+   // Check if the timer has already expired
+   if (timeText.innerHTML === '0') {
+      thirdModal.style.display = 'block'; // Display the game over modal
+      userInput.value = ''; // Reset the user input
+      return; // Exit the function early
+   }
 }
 
 initGame();
 
 refreshBtn.addEventListener('click', initGame); // runs init function to refresh word
-
 
 enterBtn.addEventListener('click', function() {
    const userInputValue = userInput.value.trim().toLowerCase(); // get user input
@@ -74,7 +91,7 @@ enterBtn.addEventListener('click', function() {
       userInput.value = ''; // checks if there is text on the input
 
    // lets user know the word they entered is incorrect
-   }else {
+   } else {
       secondModal.style.display = 'block';
       setTimeout(function() {
          secondModal.style.display = 'none';
@@ -92,58 +109,3 @@ newClose.onclick = function() {
    secondModal.style.display = 'none';
 }
 
-
-
-   
-
-
-
-
-
-// 1. Define the required variables to track state of game.
-     // define initGame();
-     // render function to render game over when next word is clicked
-
-
-   // create JS that holds an array of all words
-      // word: '...' hint: '...'
-      // define var that randomizes words. 
-      // get random obj from words.
-
-
-
-// split each letter of words in words array.
-  // shuffle letters randomlt
-
-
-
-// Use selector to add randomized word to show up on HTML
-   // pass shuffled words as word text
-
-
-
-// grab inputfield and force to lowercase and give it a variable named check word
-   // impliment hint text under word with selctor 
-
-
-// create submit/check btn for user to submit answer 
-  // create refresh btn that spits out a new rnadomized word
-   // add check word function that validates if input was correct 
-
-
-
-// create a correct word var and pass random word generated to it
-    // check is user input is equaled to correct word 
-
-
-
-// add alert that lets user know if the input was incorrect 
-    // if users input is correct, spit out another word
-    // return an alert to prompt user for input if nothing was typed
-
-// set max input value to word length
-
-// add timer 
-  // call timer with init function
-  // time decreases by 1
-  // if correct reset timer // restart game

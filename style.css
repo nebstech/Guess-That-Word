@@ -1,13 +1,17 @@
+/* Importing the Google Fonts VT323 for styling */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+/* Resetting default styles for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'VT323', 'monospace';
+  font-family: 'VT323', 'monospace'; /* Setting the font family for the entire document */
 }
 
+/* Styling the body */
 body {
+  /* Background image settings */
   background-image: url('/images/cool-retro-term.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,111 +19,124 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #282828;
+  background-color: #282828; /* Background color for fallback */
   min-height: 100vh;
   margin: 0;
 }
 
+.start {
+  font-size: 40px;
+  color: #ffff;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  
+}
+/* Styling the main container */
 .container {
   text-align: center;
   width: 700px;
   height: 400px;
   border-radius: 7px;
-  background: #282828;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: #282828; /* Main container background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adding box shadow for depth */
 }
 
+/* Styling the heading */
 .container h2 {
   font-size: 60px;
-  color: #33ff00;
-  text-shadow: 0 0 10px #ffff;
-  animation: glowAnimation 1s ease-in-out infinite alternate;
-  padding: 20px 25px;
-  border-bottom: 1px solid #ccc;
+  color: #33ff00; /* Green text color */
+  text-shadow: 0 0 10px #ffff; /* Adding text shadow for glow effect */
+  animation: glowAnimation 1s ease-in-out infinite alternate; /* Animation for glow effect */
+  padding: 20px 25px; /* Adding padding to the heading */
+  border-bottom: 1px solid #ccc; /* Bottom border for decoration */
 }
 
+/* Keyframes animation for glow effect */
 @keyframes glowAnimation {
   from {
-    text-shadow: 0 0 10px #33ff00;
+    text-shadow: 0 0 10px #33ff00; /* Initial text shadow */
   }
   to {
-    text-shadow: 0 0 20px #ffff;
+    text-shadow: 0 0 20px #ffff; /* Animated text shadow */
   }
 }
 
+/* Styling the content section */
 .container .content {
-  margin: 25px 20px 35px;
+  margin: 25px 20px 35px; /* Adding margin to the content */
 }
 
-
+/* Styling the word display */
 .content .word {
   font-size: 50px;
   font-weight: 500;
   align-items: center;
   text-align: center;
-  letter-spacing: 20px;
-  text-transform: uppercase;
-  color: #33ff00;
+  letter-spacing: 20px; /* Letter spacing for word display */
+  text-transform: uppercase; /* Uppercase text */
+  color: #33ff00; /* Green text color */
   display: inline-block;
 }
 
+/* Styling the user input field */
 .content input {
   width: 100%;
   height: 45px;
-  margin-bottom: -10px; 
+  margin-bottom: -10px; /* Adjusting margin for alignment */
   outline: none;
   font-size: 18px;
   text-align: center;
-  padding: 0 16px;
+  padding: 0 16px; /* Adding padding to the input field */
   border-radius: 5px;
-  border: 1px solid #aaa;
-  background-color: #d1d1d1;
-  color: solid black;
+  border: 1px solid #aaa; /* Border for input field */
+  background-color: #d1d1d1; /* Background color for input field */
+  color: solid black; /* Text color */
 }
 
+/* Styling the details section */
 .content .details {
   margin: 25px 0 20px;
-  color: #33ff00;
+  color: #33ff00; /* Green text color */
 }
 
+/* Styling the time display */
 .details .time {
   font-size: 33px;
 }
 
-.details p {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
+/* Styling the buttons container */
 .buttons-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px; 
+  margin-bottom: 10px; /* Adding margin to the buttons container */
 }
 
+/* Styling the refresh and check buttons */
 .refresh-button,
 .check-button {
   font-size: 20px;
-  margin: 0 80px; 
+  margin: 0 80px; /* Adding margin between buttons */
   border: none;
   border-radius: 5px;
   outline: none;
   width: 100%;
   height: 20px;
-  background-color: #aaa;
+  background-color: #aaa; /* Default button background color */
   cursor: pointer;
 }
 
-
+/* Styling the check button */
 .check-button {
-  background-color: #ffb000;
+  background-color: #ffb000; /* Custom background color for check button */
 }
 
+/* Styling the modal */
 .modal {
-  color: #ffff;
+  color: #ffff; /* Text color for modal content */
   font-size: 14px;
   border-radius: 5px;
-  display: none;
+  display: none; /* Initially hidden */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -127,31 +144,32 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
 }
 
+/* Styling the modal content */
 .modal-content {
   background-color: transparent;
-  margin: 15% auto;
+  margin: 15% auto; /* Margin for centering the modal */
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid #888; /* Border for modal content */
   width: 80%;
 }
 
+/* Styling the close button in the modal */
 .close {
-  color: #aaa;
+  color: #aaa; /* Close button color */
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-/* ---- ---- wrong word modal   --------*/
-
+/* Styling the wrong word modal */
 .nModal {
-  color: #ffff;
+  color: #ffff; /* Text color for wrong word modal */
   font-size: 14px;
   border-radius: 5px;
-  display: none;
+  display: none; /* Initially hidden */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -159,31 +177,32 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
 }
 
+/* Styling the modal content for wrong word */
 .mod-content {
   background-color: transparent;
-  margin: 15% auto;
+  margin: 15% auto; /* Margin for centering the modal */
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid #888; /* Border for modal content */
   width: 80%;
 }
 
+/* Styling the close button in the wrong word modal */
 .newclose {
-  color: #aaa;
+  color: #aaa; /* Close button color */
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-/* ---- ---- times up modal   --------*/
-
+/* Styling the times up modal */
 .gameOverModal {
-  color: #ffff;
+  color: #ffff; /* Text color for times up modal */
   font-size: 14px;
   border-radius: 5px;
-  display: none;
+  display: none; /* Initially hidden */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -191,22 +210,13 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
 }
 
+/* Styling the modal content for times up */
 .modContent {
   background-color: transparent;
-  margin: 15% auto;
+  margin: 15% auto; /* Margin for centering the modal */
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border: 1px solid #888; /* Border for modal content*/
 }
-
-.twoClose {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-
