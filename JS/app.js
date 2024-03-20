@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
      initGame(); // Initialize the game
    });
  });
- 
+
 const resetGame = () => {
    clearInterval(timer); // Clear any existing timer
    initGame(); // Start a new game
@@ -75,7 +75,19 @@ initGame();
 
 refreshBtn.addEventListener('click', initGame); // runs init function to refresh word
 
-enterBtn.addEventListener('click', function() {
+enterBtn.addEventListener('click', checkUserInput); // calls checkUserInput function when Enter button is clicked
+
+// Event listener to handle Enter key press in the input field
+userInput.addEventListener('keypress', function(event) {
+   // Check if the Enter key was pressed (key code 13)
+   if (event.keyCode === 13) {
+      // Prevent the default behavior of the Enter key (form submission)
+      event.preventDefault();
+      checkUserInput();
+   }
+});
+
+function checkUserInput() {
    const userInputValue = userInput.value.trim().toLowerCase(); // get user input
 
    //checks if correct word was entered and prompts user if word is correct
@@ -86,11 +98,8 @@ enterBtn.addEventListener('click', function() {
       }, 1000);
       userInput.value = '';
       initGame();
-
-   }if (!userInputValue) {
+   } else if (!userInputValue) {
       userInput.value = ''; // checks if there is text on the input
-
-   // lets user know the word they entered is incorrect
    } else {
       secondModal.style.display = 'block';
       setTimeout(function() {
@@ -99,7 +108,7 @@ enterBtn.addEventListener('click', function() {
 
       userInput.value = '';
    }
-});
+}
 
 span.onclick = function() {
    modal.style.display = 'none';
@@ -108,4 +117,3 @@ span.onclick = function() {
 newClose.onclick = function() {
    secondModal.style.display = 'none';
 }
-
