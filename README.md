@@ -56,7 +56,7 @@ If you have feedback, suggestions, or would like to contribute to the game, plea
 
 Enjoy playing Guess that Word!
 
+<img width="2042" alt="GTW Start Game page" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/192a99e7-6ce5-4108-a02d-84c1304cfa88">
+<img width="1999" alt="GTW In-Game screen" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/7e7c6917-8705-4c2e-8cf2-aed51008e2c1">
+<img width="2042" alt="GTW Start Game page" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/e4f3e126-4b2f-4f4a-ad87-bce66ebd9f9f">
 
-![alt text](<GTW Start Game page.png>)
-![alt text](<GTW In-Game screen.png>)
-![alt text](<GTW Game Over Modal.png>)
