@@ -12,7 +12,6 @@
 /* Styling the body */
 body {
   /* Background image settings */
-  background-image: url('/images/cool-retro-term.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -31,6 +30,15 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Prevent the canvas from capturing mouse events */
+  z-index: -1; /* Set a lower z-index to place it behind other elements */
+}
+
 /* Styling the main container */
 .container {
   text-align: center;

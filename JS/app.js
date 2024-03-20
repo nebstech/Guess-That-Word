@@ -13,6 +13,54 @@ const thirdModal = document.getElementById('gameOverModal'); // Selects the game
 const resetBtn = document.getElementById('resetBtn'); // Selects the reset button
 let timer = null; // Variable to store the timer
 
+// Selecting the canvas element and getting its 2D context
+let canvas = document.querySelector('canvas');
+let ctx = canvas.getContext('2d');
+
+// Setting canvas width and height to match window dimensions
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+
+// Creating a string with characters for the matrix effect
+let str = 'A+js js:2 @dfs 17 tr YY ufds MSr $!& ^dfs $Ew er 3H # $ ^ . ;) ,: !';
+
+let matrix = str.split(''); // splitting each letter of str
+let font = 12; // Font size for rendering text
+let col = width / font;// Number of columns based on canvas width
+let arr = []; // Array to store vertical position
+
+// Initializing the arr array with 1 for each column
+for (let i = 0; i < col; i++) {
+  arr[i] = 1;
+}
+
+// Function to draw the matrix effect
+const draw = () => {
+   // Filling the canvas with a semi-transparent black color for fading effect
+   ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+   ctx.fillRect(0, 0, width, height);
+   // Setting text color to green and font style
+   ctx.fillStyle = '#00FF00';
+   ctx.font = `${font}px system-ui`;
+   
+   for (let i = 0; i < arr.length; i++) {
+   // Selecting a random character from the matrix array
+    let txt = matrix[Math.floor(Math.random() * matrix.length)];
+    ctx.fillText(txt, i * font, arr[i] * font);
+
+// if text reaches bottom of screen reset the position
+    if (arr[i] * font > height && Math.random() > 0.975) {
+      arr[i] = 0;
+   }
+   arr[i]++; // vertical position for the next frame
+  }
+}
+
+setInterval(draw, 30);
+
+window.addEventListener('resize', () => location.reload());
+
+
 document.addEventListener('DOMContentLoaded', () => {
    const startBtn = document.querySelector('.start');
    const mainContent = document.querySelector('main');
