@@ -12,7 +12,7 @@ To play Guess that Word, follow these steps:
 1. Clone this repository to your local machine.
 2. Open the index.html file in your web browser.
 
-Alternatively, you can play the game online at [Game Link](#) (replace # with the actual link once deployed).
+Alternatively, you can play the game online at [Game Link](https://taupe-travesseiro-364358.netlify.app)
 
 ## Gameplay Rules
 
