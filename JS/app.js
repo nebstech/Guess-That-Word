@@ -71,7 +71,7 @@ const initGame = () => {
    }
 }
 
-initGame();
+
 
 refreshBtn.addEventListener('click', initGame); // runs init function to refresh word
 
@@ -117,3 +117,5 @@ span.onclick = function() {
 newClose.onclick = function() {
    secondModal.style.display = 'none';
 }
+
+
