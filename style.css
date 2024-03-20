@@ -1,7 +1,7 @@
 /* Importing the Google Fonts VT323 for styling */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-/* Resetting default styles for all elements */
+
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none; /* Prevent the canvas from capturing mouse events */
+  pointer-events: none; 
   z-index: -1; /* Set a lower z-index to place it behind other elements */
 }
 

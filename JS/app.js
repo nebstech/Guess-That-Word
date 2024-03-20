@@ -1,3 +1,4 @@
+
 const wordTxt = document.querySelector('.word'); // Selects the element to display the shuffled word
 const hintTxt = document.querySelector('.hint span'); // Selects the element to display the hint
 const timeText = document.querySelector('.time b'); // Selects the element to display the time
