@@ -1,12 +1,13 @@
 /* Importing the Google Fonts VT323 for styling */
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'VT323', 'monospace'; /* Setting the font family for the entire document */
+  font-family: 'Share Tech Mono', monospace; /* Setting the font family for the entire document */
 }
 
 /* Styling the body */
