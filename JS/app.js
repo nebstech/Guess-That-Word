@@ -189,6 +189,28 @@ function updateTally(count) {
    }
 }
 
+const infoBtn = document.querySelector('.info-button');
+const instructionsModal = document.getElementById('instructionsModal');
+
+infoBtn.addEventListener('click', () => {
+   // Pause the timer by clearing the interval
+   clearInterval(timer);
+
+   // Show the instructions modal
+   instructionsModal.style.display = 'block';
+});
+
+// Close the instructions modal when the user clicks on the close button
+const closeInstructionsBtn = document.querySelector('.close-instructions');
+closeInstructionsBtn.addEventListener('click', () => {
+   // Hide the instructions modal
+   instructionsModal.style.display = 'none';
+
+   // Resume the timer by starting it again
+   startTimer(parseInt(timeText.innerHTML));
+});
+
+
 
 span.onclick = function() {
    modal.style.display = 'none';

@@ -44,7 +44,7 @@ canvas {
 .container {
   text-align: center;
   width: 700px;
-  height: 400px;
+  height: 435px;
   border-radius: 7px;
   background: #282828; /* Main container background color */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adding box shadow for depth */
@@ -54,20 +54,24 @@ canvas {
 .container h2 {
   font-size: 60px;
   color: #33ff00; /* Green text color */
-  text-shadow: 0 0 10px #ffff; /* Adding text shadow for glow effect */
-  animation: glowAnimation 1s ease-in-out infinite alternate; /* Animation for glow effect */
   padding: 20px 25px; /* Adding padding to the heading */
   border-bottom: 1px solid #ccc; /* Bottom border for decoration */
 }
 
-/* Keyframes animation for glow effect */
-@keyframes glowAnimation {
-  from {
-    text-shadow: 0 0 10px #33ff00; /* Initial text shadow */
-  }
-  to {
-    text-shadow: 0 0 20px #ffff; /* Animated text shadow */
-  }
+.container .hint {
+  color: #ffff;
+}
+
+.container .time {
+  color:#00FF00;
+}
+
+.container .time b {
+  color: #FFFFFF;
+}
+
+.guess {
+  color: #FFD700;
 }
 
 /* Styling the content section */
@@ -83,7 +87,7 @@ canvas {
   text-align: center;
   letter-spacing: 20px; /* Letter spacing for word display */
   text-transform: uppercase; /* Uppercase text */
-  color: #33ff00; /* Green text color */
+  color: #fff; /* Green text color */
   display: inline-block;
 }
 
@@ -136,7 +140,7 @@ canvas {
 
 /* Styling the check button */
 .check-button {
-  background-color: #ffb000; /* Custom background color for check button */
+  background-color: #5DA1A0; /* Custom background color for check button */
 }
 
 /* Styling the modal */
@@ -243,5 +247,42 @@ canvas {
   margin-bottom: 0;
   background-color: #aaa;
   width: 10%;
+}
 
+.info-button {
+  align-items: center;
+  font-size: 14px;
+  padding: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 0;
+  background-color: #aaa;
+  width: 15%;
+}
+
+.modal-content {
+  width: 40%;
+  background-color: #282828;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+
+}
+
+.modal-content .close-instructions {
+  color: red;
+  display: flex;
+  justify-content: right;
+  margin-top: -6px;
+  padding: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modal-content h2{
+  color: #ffff;
+  animation: none;
+  text-shadow: none;
 }

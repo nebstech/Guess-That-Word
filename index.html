@@ -19,7 +19,8 @@
         <div class="details">
           <p class="hint"><b>Hint:</b> <span></span></p>
           <p class="time">Time Left: <span><b>25</b>s</span></p>
-          <p>Correct Guesses: <span id="correctGuesses">0</span></p>
+          <p class="guess">Correct Guesses: <span id="correctGuesses">0</span></p>
+          <button class="info-button">How to Play</button>
         </div>
         <input type="text" placeholder="Debug Here:">
       </div>
@@ -27,16 +28,31 @@
         <button class="refresh-button">Refresh</button>
         <button class="check-button">Enter Word</button>
       </div>
-      <div class="modal" id="myModal">
+      <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close"></span>
           <p>Congratulations! You guessed the word correctly.</p>
         </div>
       </div>
-      <div class="nModal" id="newModal">
+      <div id="newModal" class="modal">
         <div class="mod-content">
           <span class="newclose"></span>
           <p>Nope, more malware incoming.</p>
+        </div>
+      </div>
+      <div id="instructionsModal" class="modal">
+        <div class="modal-content">
+          <span class="close-instructions">&times;</span>
+          <h2>How to Play</h2>
+          <p>
+            <li>A word will be displayed with its letters shuffled.</li>
+            <li>Use the input field to enter your guess.</li>
+            <li>Click the "Enter Word" button or press Enter on your keyboard to submit your guess.</li>
+            <li>If your guess is correct, you'll move to the next word.</li>
+            <li>If your guess is incorrect, you'll receive feedback and can try again.</li>
+            <li>You have 25 seconds to guess each word. The timer starts when you begin the game.</li>
+            <li>Enjoy and have fun!</li>   
+          </p>
         </div>
       </div>
       <div id="gameOverModal" class="modal">
