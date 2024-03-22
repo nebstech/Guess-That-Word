@@ -57,4 +57,12 @@ If you have feedback, suggestions, or would like to contribute to the game, plea
 
 Enjoy playing Guess that Word!
 
+## Code-Snippets Examples
 
+I initially started by attempting to find a secret word, but I realized that it would be more engaging and challenging to scramble each letter of a word. This led me to explore the logic required to effectively scramble each letter of a word, one by one.
+[img]
+
+
+Conclusion
+
+This project demonstrates my understanding of front-end web development using HTML, CSS, and JavaScript to create an interactive game interface. Your feedback and suggestions are appreciated. Thank you for reviewing my work!
