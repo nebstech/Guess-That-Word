@@ -49,6 +49,7 @@ Alternatively, you can play the game online at [Game Link](https://taupe-travess
 
 - Game developed by Adonis.
 - Word list and hints sourced from wordfind.com & chatGPT 3.5.
+- Audio sourced from JimTV.
 
 ## Feedback and Contributions
 
@@ -56,9 +57,4 @@ If you have feedback, suggestions, or would like to contribute to the game, plea
 
 Enjoy playing Guess that Word!
 
-<img width="2042" alt="GTW Start Game page" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/192a99e7-6ce5-4108-a02d-84c1304cfa88">
-
-<img width="1999" alt="GTW In-Game screen" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/7e7c6917-8705-4c2e-8cf2-aed51008e2c1">
-
-<img width="1999" alt="GTW Game Over Modal" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/bd40d415-f242-4446-b94f-0ee647505a26">
 

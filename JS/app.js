@@ -14,8 +14,9 @@ const thirdModal = document.getElementById('gameOverModal'); // Selects the game
 const resetBtn = document.getElementById('resetBtn'); // Selects the reset button
 let timer = null; // Variable to store the timer
 let correctGuesses = 0;
-// let themeToggler = document.querySelector('.theme-toggler');
+// selecting theme container and giving it a var
 let theme = document.querySelector('.themes-container');
+
 
 document.querySelector('#theme-open').onclick = () => {
    theme.classList.add('active');
@@ -35,6 +36,7 @@ document.querySelectorAll('.theme-colors div').forEach(color => {
    updateCanvasColor();
    }
 });
+
 
 
 // Selecting the canvas element and getting its 2D context
@@ -95,6 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
    startBtn.addEventListener('click', () => {
      startBtn.style.display = 'none'; // Hide the start button
      mainContent.style.display = 'block'; // Show the main content
+   const backgroundAudio = document.getElementById('backgroundAudio');
+if (backgroundAudio) {
+   backgroundAudio.volume = 0.01; 
+   backgroundAudio.play();
+} else {
+   console.error('audio element not found.');
+}
+
      initGame(); // Initialize the game
    });
  });
@@ -120,6 +130,13 @@ const startTimer = maxTime => {
          clearInterval(timer); // Clear the timer when time is up
          thirdModal.style.display = 'block'; // Display the game over modal
          userInput.value = ''; // Reset the user input
+         const gameOverAudio = document.getElementById('gameOverAudio');
+         if (gameOverAudio) {
+            gameOverAudio.volume = 0.05;
+            gameOverAudio.play();
+         } else {
+            console.error('Game over audio element not found.');
+         }
       }
    }, 1000);
 }
@@ -174,6 +191,13 @@ function checkUserInput() {
          modal.style.display = 'none';
       }, 1000);
       userInput.value = '';
+      const correctAudio = document.getElementById('correctAudio');
+         if (correctAudio) {
+            correctAudio.volume = 0.1;
+            correctAudio.play();
+         } else {
+            console.error('audio element not found.');
+         }
       initGame();
 
       correctGuesses++;
