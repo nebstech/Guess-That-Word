@@ -60,7 +60,10 @@ Enjoy playing Guess that Word!
 ## Code-Snippets Examples
 
 I initially started by attempting to find a secret word, but I realized that it would be more engaging and challenging to scramble each letter of a word. This led me to explore the logic required to effectively scramble each letter of a word, one by one.
-[img]
+
+<img width="676" alt="scrambled screen shot" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/221d75b4-bf1e-4292-b71c-fab1d62f4ccb">
+
+<img width="676" alt="Screenshot 2024-03-22 at 4 44 58 PM" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/04acf411-0f3d-4d7d-a28a-5526270e8014">
 
 
 Conclusion
