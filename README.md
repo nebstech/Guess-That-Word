@@ -49,6 +49,7 @@ Alternatively, you can play the game online at [Game Link](https://taupe-travess
 
 - Game developed by Adonis.
 - Word list and hints sourced from wordfind.com & chatGPT 3.5.
+- Audio sourced from JimTV.
 
 ## Feedback and Contributions
 
@@ -56,9 +57,15 @@ If you have feedback, suggestions, or would like to contribute to the game, plea
 
 Enjoy playing Guess that Word!
 
-<img width="2042" alt="GTW Start Game page" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/192a99e7-6ce5-4108-a02d-84c1304cfa88">
+## Code-Snippets Examples
 
-<img width="1999" alt="GTW In-Game screen" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/7e7c6917-8705-4c2e-8cf2-aed51008e2c1">
+I initially started by attempting to find a secret word, but I realized that it would be more engaging and challenging to scramble each letter of a word. This led me to explore the logic required to effectively scramble each letter of a word, one by one.
 
-<img width="1999" alt="GTW Game Over Modal" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/bd40d415-f242-4446-b94f-0ee647505a26">
+<img width="676" alt="scrambled screen shot" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/221d75b4-bf1e-4292-b71c-fab1d62f4ccb">
 
+<img width="676" alt="Screenshot 2024-03-22 at 4 44 58 PM" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/04acf411-0f3d-4d7d-a28a-5526270e8014">
+
+
+Conclusion
+
+This project demonstrates my understanding of front-end web development using HTML, CSS, and JavaScript to create an interactive game interface. Your feedback and suggestions are appreciated. Thank you for reviewing my work!

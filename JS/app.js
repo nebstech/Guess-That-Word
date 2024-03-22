@@ -14,6 +14,30 @@ const thirdModal = document.getElementById('gameOverModal'); // Selects the game
 const resetBtn = document.getElementById('resetBtn'); // Selects the reset button
 let timer = null; // Variable to store the timer
 let correctGuesses = 0;
+// selecting theme container and giving it a var
+let theme = document.querySelector('.themes-container');
+
+
+document.querySelector('#theme-open').onclick = () => {
+   theme.classList.add('active');
+   document.body.style.paddingRight = '350px';
+}
+
+document.querySelector('#theme-close').onclick = () => {
+   theme.classList.remove('active');
+   document.body.style.paddingRight = '0px';
+}
+
+
+document.querySelectorAll('.theme-colors div').forEach(color => {
+   color.onclick = () => {
+   let background = window.getComputedStyle(color).backgroundColor;
+   document.querySelector(':root').style.setProperty('--main-color', background);
+   updateCanvasColor();
+   }
+});
+
+
 
 // Selecting the canvas element and getting its 2D context
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
    for (let i = 0; i < col; i++) {
       arr[i] = 1;
    }
- 
+
    // Function to draw the matrix effect
    const draw = () => {
      // Filling the canvas with a semi-transparent black color for fading effect
@@ -46,12 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
      // Setting text color to green and font style
    ctx.fillStyle = '#00FF00';
    ctx.font = `${font}px system-ui`;
- 
+
    for (let i = 0; i < arr.length; i++) {
        // Selecting a random character from the matrix array
        let txt = matrix[Math.floor(Math.random() * matrix.length)];
        ctx.fillText(txt, i * font, arr[i] * font);
- 
+
        // if text reaches bottom of screen reset the position
        if (arr[i] * font > height && Math.random() > 0.975) {
          arr[i] = 0;
@@ -61,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
    }
  
    setInterval(draw, 30);
- });
- 
+});
+
 window.addEventListener('resize', () => location.reload());
 
 
@@ -73,6 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
    startBtn.addEventListener('click', () => {
      startBtn.style.display = 'none'; // Hide the start button
      mainContent.style.display = 'block'; // Show the main content
+   const backgroundAudio = document.getElementById('backgroundAudio');
+if (backgroundAudio) {
+   backgroundAudio.volume = 0.01; 
+   backgroundAudio.play();
+} else {
+   console.error('audio element not found.');
+}
+
      initGame(); // Initialize the game
    });
  });
@@ -98,6 +130,13 @@ const startTimer = maxTime => {
          clearInterval(timer); // Clear the timer when time is up
          thirdModal.style.display = 'block'; // Display the game over modal
          userInput.value = ''; // Reset the user input
+         const gameOverAudio = document.getElementById('gameOverAudio');
+         if (gameOverAudio) {
+            gameOverAudio.volume = 0.05;
+            gameOverAudio.play();
+         } else {
+            console.error('Game over audio element not found.');
+         }
       }
    }, 1000);
 }
@@ -152,6 +191,13 @@ function checkUserInput() {
          modal.style.display = 'none';
       }, 1000);
       userInput.value = '';
+      const correctAudio = document.getElementById('correctAudio');
+         if (correctAudio) {
+            correctAudio.volume = 0.1;
+            correctAudio.play();
+         } else {
+            console.error('audio element not found.');
+         }
       initGame();
 
       correctGuesses++;
@@ -188,6 +234,28 @@ function updateTally(count) {
       tallyElement.textContent = count;
    }
 }
+
+const infoBtn = document.querySelector('.info-button');
+const instructionsModal = document.getElementById('instructionsModal');
+
+infoBtn.addEventListener('click', () => {
+   // Pause the timer by clearing the interval
+   clearInterval(timer);
+
+   // Show the instructions modal
+   instructionsModal.style.display = 'block';
+});
+
+// Close the instructions modal when the user clicks on the close button
+const closeInstructionsBtn = document.querySelector('.close-instructions');
+closeInstructionsBtn.addEventListener('click', () => {
+   // Hide the instructions modal
+   instructionsModal.style.display = 'none';
+
+   // Resume the timer by starting it again
+   startTimer(parseInt(timeText.innerHTML));
+});
+
 
 
 span.onclick = function() {

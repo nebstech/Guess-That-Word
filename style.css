@@ -1,7 +1,9 @@
 /* Importing the Google Fonts VT323 for styling */
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-
+:root{
+  --main-color: #00FF00;
+}
 
 * {
   margin: 0;
@@ -24,6 +26,92 @@ body {
   margin: 0;
 }
 
+#theme-open {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+.themes-container {
+  position: fixed;
+  top: 0; right: -100%;
+  background: #282828;
+  border-left: 1px solid rgba(0,0,0,.1);
+  height: 100vh;
+  width: 350px;
+  z-index: 1000;
+  text-align: right;
+  padding: 20px;
+}
+
+.themes-container.active {
+  right: 0;
+}
+.themes-container #theme-close {
+  font-size: 40px;
+  color: #fff;
+}
+
+.themes-container h3 {
+  text-align: center;
+  color: #fff;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 15px 0;
+  margin: 20px 0;
+  cursor: initial;
+}
+
+#theme-close {
+  cursor: pointer;
+}
+
+
+.themes-container .theme-colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.themes-container .theme-colors .firstColor {
+  background: #00FF00;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.themes-container .theme-colors .secondColor {
+  background: #FF00FF;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.themes-container .theme-colors .thirdColor {
+  background:#89CFF0;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.themes-container .theme-colors .fourthColor {
+  background: #FFC0CB;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+
 .start {
   font-size: 40px;
   color: #ffff;
@@ -36,15 +124,14 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none; 
+  pointer-events: none;
   z-index: -1; /* Set a lower z-index to place it behind other elements */
 }
-
 /* Styling the main container */
 .container {
   text-align: center;
   width: 700px;
-  height: 400px;
+  height: 445px;
   border-radius: 7px;
   background: #282828; /* Main container background color */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adding box shadow for depth */
@@ -53,21 +140,25 @@ canvas {
 /* Styling the heading */
 .container h2 {
   font-size: 60px;
-  color: #33ff00; /* Green text color */
-  text-shadow: 0 0 10px #ffff; /* Adding text shadow for glow effect */
-  animation: glowAnimation 1s ease-in-out infinite alternate; /* Animation for glow effect */
+  color: var(--main-color); /* Green text color */
   padding: 20px 25px; /* Adding padding to the heading */
   border-bottom: 1px solid #ccc; /* Bottom border for decoration */
 }
 
-/* Keyframes animation for glow effect */
-@keyframes glowAnimation {
-  from {
-    text-shadow: 0 0 10px #33ff00; /* Initial text shadow */
-  }
-  to {
-    text-shadow: 0 0 20px #ffff; /* Animated text shadow */
-  }
+.container .hint {
+  color: #ffff;
+}
+
+.container .time {
+  color: var(--main-color); 
+}
+
+.container .time b {
+  color: #FFFFFF;
+}
+
+.guess {
+  color: #FFD700;
 }
 
 /* Styling the content section */
@@ -83,7 +174,7 @@ canvas {
   text-align: center;
   letter-spacing: 20px; /* Letter spacing for word display */
   text-transform: uppercase; /* Uppercase text */
-  color: #33ff00; /* Green text color */
+  color: #fff; /* Green text color */
   display: inline-block;
 }
 
@@ -105,7 +196,7 @@ canvas {
 /* Styling the details section */
 .content .details {
   margin: 25px 0 20px;
-  color: #33ff00; 
+  color: var(--main-color); 
 }
 
 /* Styling the time display */
@@ -136,7 +227,7 @@ canvas {
 
 /* Styling the check button */
 .check-button {
-  background-color: #ffb000; /* Custom background color for check button */
+  background-color: #5DA1A0; /* Custom background color for check button */
 }
 
 /* Styling the modal */
@@ -174,7 +265,7 @@ canvas {
 }
 
 /* Styling the wrong word modal */
-.nModal {
+#newModal {
   color: #ffff; /* Text color for wrong word modal */
   font-size: 14px;
   border: none;
@@ -190,22 +281,23 @@ canvas {
   background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
 }
 
-/* Styling the modal content for wrong word */
-.mod-content {
+#newModal .newClose {
+  text-align: center;
   background-color: transparent;
   margin: 15% auto; /* Margin for centering the modal */
   padding: 20px;
-  border: 1px solid #888; /* Border for modal content */
   width: 80%;
 }
 
-/* Styling the close button in the wrong word modal */
-.newclose {
-  color: #aaa; /* Close button color */
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/* Styling the modal content for wrong word */
+.mod-content {
+  width: 40%;
+  background-color: #282828;
+  margin: 15% auto; /* Margin for centering the modal */
+  padding: 20px;
+  border: 1px solid #888;
 }
+
 
 /* Styling the times up modal */
 .gameOverModal {
@@ -243,5 +335,42 @@ canvas {
   margin-bottom: 0;
   background-color: #aaa;
   width: 10%;
+}
 
+.info-button {
+  align-items: center;
+  font-size: 14px;
+  padding: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 0;
+  background-color: #aaa;
+  width: 15%;
+}
+
+.modal-content {
+  width: 40%;
+  background-color: #282828;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+
+}
+
+.modal-content .close-instructions {
+  color: red;
+  display: flex;
+  justify-content: right;
+  margin-top: -6px;
+  padding: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modal-content h2{
+  color: #ffff;
+  animation: none;
+  text-shadow: none;
 }
