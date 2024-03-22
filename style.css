@@ -132,7 +132,7 @@ canvas {
 .container {
   text-align: center;
   width: 700px;
-  height: 435px;
+  height: 445px;
   border-radius: 7px;
   background: #282828; /* Main container background color */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adding box shadow for depth */
@@ -266,7 +266,7 @@ canvas {
 }
 
 /* Styling the wrong word modal */
-.nModal {
+#newModal {
   color: #ffff; /* Text color for wrong word modal */
   font-size: 14px;
   border: none;
@@ -282,22 +282,23 @@ canvas {
   background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
 }
 
-/* Styling the modal content for wrong word */
-.mod-content {
+#newModal .newClose {
+  text-align: center;
   background-color: transparent;
   margin: 15% auto; /* Margin for centering the modal */
   padding: 20px;
-  border: 1px solid #888; /* Border for modal content */
   width: 80%;
 }
 
-/* Styling the close button in the wrong word modal */
-.newclose {
-  color: #aaa; /* Close button color */
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/* Styling the modal content for wrong word */
+.mod-content {
+  width: 40%;
+  background-color: #282828;
+  margin: 15% auto; /* Margin for centering the modal */
+  padding: 20px;
+  border: 1px solid #888;
 }
+
 
 /* Styling the times up modal */
 .gameOverModal {
