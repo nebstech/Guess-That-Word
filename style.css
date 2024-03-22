@@ -1,7 +1,9 @@
 /* Importing the Google Fonts VT323 for styling */
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-
+:root{
+  --main-color: #00FF00;
+}
 
 * {
   margin: 0;
@@ -24,6 +26,93 @@ body {
   margin: 0;
 }
 
+#theme-open {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+.themes-container {
+  position: fixed;
+  top: 0; right: -100%;
+  background: #282828;
+  border-left: 1px solid rgba(0,0,0,.1);
+  height: 100vh;
+  width: 350px;
+  z-index: 1000;
+  text-align: right;
+  padding: 20px;
+}
+
+.themes-container.active {
+  right: 0;
+}
+.themes-container #theme-close {
+  font-size: 40px;
+  color: #fff;
+}
+
+.themes-container h3 {
+  text-align: center;
+  color: #fff;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 15px 0;
+  margin: 20px 0;
+  cursor: initial;
+}
+
+#theme-close {
+  cursor: pointer;
+}
+
+
+.themes-container .theme-colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.themes-container .theme-colors .firstColor {
+  background: #00FF00;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.themes-container .theme-colors .secondColor {
+  background: #FF00FF;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.themes-container .theme-colors .thirdColor {
+  background:#89CFF0;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.themes-container .theme-colors .fourthColor {
+  background: #FFC0CB;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+
+
 .start {
   font-size: 40px;
   color: #ffff;
@@ -36,10 +125,9 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none; 
+  pointer-events: none;
   z-index: -1; /* Set a lower z-index to place it behind other elements */
 }
-
 /* Styling the main container */
 .container {
   text-align: center;
@@ -53,7 +141,7 @@ canvas {
 /* Styling the heading */
 .container h2 {
   font-size: 60px;
-  color: #33ff00; /* Green text color */
+  color: var(--main-color); /* Green text color */
   padding: 20px 25px; /* Adding padding to the heading */
   border-bottom: 1px solid #ccc; /* Bottom border for decoration */
 }
@@ -63,7 +151,7 @@ canvas {
 }
 
 .container .time {
-  color:#00FF00;
+  color: var(--main-color); 
 }
 
 .container .time b {
@@ -109,7 +197,7 @@ canvas {
 /* Styling the details section */
 .content .details {
   margin: 25px 0 20px;
-  color: #33ff00; 
+  color: var(--main-color); 
 }
 
 /* Styling the time display */

@@ -14,6 +14,28 @@ const thirdModal = document.getElementById('gameOverModal'); // Selects the game
 const resetBtn = document.getElementById('resetBtn'); // Selects the reset button
 let timer = null; // Variable to store the timer
 let correctGuesses = 0;
+// let themeToggler = document.querySelector('.theme-toggler');
+let theme = document.querySelector('.themes-container');
+
+document.querySelector('#theme-open').onclick = () => {
+   theme.classList.add('active');
+   document.body.style.paddingRight = '350px';
+}
+
+document.querySelector('#theme-close').onclick = () => {
+   theme.classList.remove('active');
+   document.body.style.paddingRight = '0px';
+}
+
+
+document.querySelectorAll('.theme-colors div').forEach(color => {
+   color.onclick = () => {
+   let background = window.getComputedStyle(color).backgroundColor;
+   document.querySelector(':root').style.setProperty('--main-color', background);
+   updateCanvasColor();
+   }
+});
+
 
 // Selecting the canvas element and getting its 2D context
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
    for (let i = 0; i < col; i++) {
       arr[i] = 1;
    }
- 
+
    // Function to draw the matrix effect
    const draw = () => {
      // Filling the canvas with a semi-transparent black color for fading effect
@@ -46,12 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
      // Setting text color to green and font style
    ctx.fillStyle = '#00FF00';
    ctx.font = `${font}px system-ui`;
- 
+
    for (let i = 0; i < arr.length; i++) {
        // Selecting a random character from the matrix array
        let txt = matrix[Math.floor(Math.random() * matrix.length)];
        ctx.fillText(txt, i * font, arr[i] * font);
- 
+
        // if text reaches bottom of screen reset the position
        if (arr[i] * font > height && Math.random() > 0.975) {
          arr[i] = 0;
@@ -61,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
    }
  
    setInterval(draw, 30);
- });
- 
+});
+
 window.addEventListener('resize', () => location.reload());
 
 
