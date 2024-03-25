@@ -64,7 +64,15 @@ I initially started by attempting to find a secret word, but I realized that it 
 <img width="676" alt="scrambled screen shot" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/221d75b4-bf1e-4292-b71c-fab1d62f4ccb">
 
 <img width="676" alt="Screenshot 2024-03-22 at 4 44 58 PM" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/04acf411-0f3d-4d7d-a28a-5526270e8014">
+____________________ ## Screen Shots
 
+<img width="2033" alt="Screenshot 2024-03-25 at 9 23 46 AM" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/c63c1f2f-4e3d-4722-99f7-33fa696e40ca">
+
+
+<img width="2033" alt="Screenshot 2024-03-25 at 9 23 54 AM" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/dd6c676e-539f-49e8-9417-7e447e7a47d3">
+
+
+<img width="2033" alt="Screenshot 2024-03-25 at 9 24 19 AM" src="https://github.com/nebstech/Guess-That-Word/assets/156877357/0056a674-f769-43dc-8b70-9ca867075dad">
 
 Conclusion
 
